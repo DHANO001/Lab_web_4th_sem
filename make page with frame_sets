@@ -1,0 +1,43 @@
+<!-- row_wise_frame-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Row-wise Frames</title>
+</head>
+<frameset rows="50%,50%">
+    <frame src="https://www.example.com" />
+    <frame src="https://www.example.com" />
+</frameset>
+</html>
+
+<!--colume_wise_frame-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Column-wise Frames</title>
+</head>
+<frameset cols="50%,50%">
+    <frame src="https://www.example.com" />
+    <frame src="https://www.example.com" />
+</frameset>
+</html>
+
+<!--colume_and_ row_wise_frame-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Row and Column Frames</title>
+</head>
+<frameset rows="50%,50%">
+    <frame src="https://www.example.com" />
+    <frameset cols="50%,50%">
+        <frame src="https://www.example.com" />
+        <frame src="https://www.example.com" />
+    </frameset>
+</frameset>
+</html>
+
+
+
