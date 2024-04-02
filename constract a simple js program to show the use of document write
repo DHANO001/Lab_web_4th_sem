@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>JavaScript Example</h2>
+    <button onclick="writeMessage()">Click me</button>
+    <script>
+        function writeMessage() {
+            document.write("Hello, World!");
+        }
+    </script>
+</body>
+</html>
