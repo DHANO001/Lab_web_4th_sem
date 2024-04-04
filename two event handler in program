@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handlers Example</title>
+</head>
+<body>
+    <h1>Event Handlers Example</h1>
+    <button onclick="changeColor()">Change Color</button>
+    <input type="text" onkeypress="if(event.key === 'Enter') alert('Enter key pressed!')" placeholder="Press Enter">
+
+    <script>
+        let colors = ["lightblue", "lightgreen", "lightcoral"];
+        let currentColorIndex = 0;
+
+        function changeColor() {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+    </script>
+</body>
+</html>
