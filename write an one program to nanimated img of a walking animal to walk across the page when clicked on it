@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Walking Cat</title>
+    <style>
+        body {
+            overflow: hidden; /* Prevents horizontal scroll */
+        }
+
+        #cat {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.8s linear;
+        }
+    </style>
+</head>
+<body>
+    <img id="cat" src="cat.png" alt="Walking Cat" onclick="startWalking()">
+    <script>
+        let isWalking = false;
+
+        function startWalking() {
+            if (!isWalking) {
+                isWalking = true;
+                walk();
+            }
+        }
+
+        function walk() {
+            let cat = document.getElementById("cat");
+            let maxWidth = window.innerWidth - cat.width;
+            let currentPosition = parseInt(cat.style.left) || 0;
+            let newPosition = currentPosition + 10;
+            if (newPosition > maxWidth) {
+                cat.style.left = maxWidth + "px";
+                setTimeout(function() {
+                    cat.style.transform = "scaleX(-1)";
+                    walkBack();
+                }, 800);
+            } else {
+                cat.style.left = newPosition + "px";
+                requestAnimationFrame(walk);
+            }
+        }
+
+        function walkBack() {
+            let cat = document.getElementById("cat");
+            let currentPosition = parseInt(cat.style.left);
+            let newPosition = currentPosition - 10;
+            if (newPosition < 0) {
+                cat.style.left = "0px";
+                cat.style.transform = "scaleX(1)";
+                isWalking = false;
+            } else {
+                cat.style.left = newPosition + "px";
+                requestAnimationFrame(walkBack);
+            }
+        }
+    </script>
+</body>
+</html>
