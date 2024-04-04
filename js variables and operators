@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rectangle Area Calculator</title>
+</head>
+<body>
+    <h1>Rectangle Area Calculator</h1>
+
+    <script>
+        // Define the length and width of the rectangle
+        let length = 5;
+        let width = 3;
+
+        // Calculate the area of the rectangle
+        let area = length * width;
+
+        // Display the result on the page
+        document.write("The area of the rectangle is: " + area);
+    </script>
+</body>
+</html>
